@@ -1,0 +1,9 @@
+apn_server:
+  host: 'gateway.sandbox.push.apple.com' #'gateway.push.apple.com'
+  port: '2195'
+  ssl_pem: 'ck.pem' #aps_developer_identity.cer' #Push certificate file name
+  key: 'buzzd!rocks' #Push certificate service password
+  
+queue:
+  type: 'activemq'
+  name: 'apn_queue'

@@ -60,7 +60,7 @@
     <name>symfony</name>
     <channel>pear.symfony-project.com</channel>
     <min>1.0.0</min>
-    <max>1.4.0</max>
+    <max>1.1.10</max>
    </package>
   </required>
  </dependencies>

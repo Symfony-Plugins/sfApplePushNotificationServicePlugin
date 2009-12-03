@@ -79,7 +79,7 @@
     <date>2009-12-03</date>
     <license>MIT</license>
     <notes>
-      *Activemq Plugin main connection class
+      *APNS Plugin main connection class
     </notes>
   </release>
  </changelog>

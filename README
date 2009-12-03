@@ -1,0 +1,32 @@
+= sfApplePushNotificationServicePlugin plugin =
+
+The `sfApplePushNotificationServicePlugin` it's the perfect plugin to manage Apple push notifications from you symfony app to the iphone users all around the globe. 
+It counts with a queue listener supporting:
+ - Activemq (sfActivemqPlugin required)
+ - More of them will be added soon...
+
+== Installation ==
+
+To install the plugin for a symfony project, the usual process is to use the
+symfony command line.
+
+With symfony 1.0, use:
+
+{{{
+$ symfony plugin-install http://plugins.symfony-project.com/sfApplePushNotificationServicePlugin
+}}}
+
+With symfony 1.1/1.2, use:
+
+{{{
+$ symfony plugin:install sfApplePushNotificationServicePlugin
+}}}
+
+Clear the cache to enable the autoloading to find the new classes:
+{{{
+$ php symfony cc
+}}}
+
+You're done.
+
+Special thanks: Fabien POTENCIER - I will be creating my own readme soon adding information about the usage of the plugin. 

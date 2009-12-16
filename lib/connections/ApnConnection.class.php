@@ -23,7 +23,9 @@ class ApnConecction {
     }
     
     function send($token, $message) {
-        $message = chr(0).chr(0).chr(32).pack('H*', $token).chr(0).chr(strlen($message)).$message;
+    	$body = array('aps' => array('alert' => array('body' => $message)));
+    	$payload = json_encode($body);
+        $message = chr(0) . pack("n",32) . pack('H*', str_replace(' ', '', $token)) . pack("n",strlen($payload)) . $payload;
         fwrite($this->connection, $message);
     }
 } 

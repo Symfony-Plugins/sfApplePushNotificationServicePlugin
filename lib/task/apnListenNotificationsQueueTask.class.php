@@ -48,7 +48,11 @@ class apnListenApnQueueTask extends sfBaseTask {
         if($queue_item = $queue_connection->readMessage()){
             $apn_connection = new ApnConecction();
             $apn_connection->connect();
-            $apn_connection->send($queue_item['token'], $queue_item['message']);
+            if(isset($queue_item['custom_content'])) {
+            	$apn_connection->customSend($queue_item['token'], $queue_item['custom_content']);
+            } else {
+            	$apn_connection->send($queue_item['token'], $queue_item['message']);
+            }
             $apn_connection->disconnect();
         }
         $queue_connection->disconnect();

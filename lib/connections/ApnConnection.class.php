@@ -28,4 +28,11 @@ class ApnConecction {
         $message = chr(0) . pack("n",32) . pack('H*', str_replace(' ', '', $token)) . pack("n",strlen($payload)) . $payload;
         fwrite($this->connection, $message);
     }
+    
+    function customSend($token, $aps) {
+    	$body = array('aps' => $aps);
+    	$payload = json_encode($body);
+        $message = chr(0) . pack("n",32) . pack('H*', str_replace(' ', '', $token)) . pack("n",strlen($payload)) . $payload;
+        fwrite($this->connection, $message);
+    }
 } 
